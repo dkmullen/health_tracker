@@ -1,0 +1,139 @@
+/* Reset CSS styles
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------End of style reset ------------------ */
+
+body {
+	font-family: 'Lato', sans-serif;
+	max-width: 800px;
+	margin: 0 auto;
+	line-height: 1.15;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 300;
+}
+h1 {
+	font-size: 300%;
+}
+h2 {
+	font-size: 250%;
+}
+h3 {
+	font-size: 150%;
+}
+.box {
+	width: 100%;
+}
+
+/* block is the content of each box */
+.block {
+	padding: 15px;
+}
+.dark-blue {
+	background-color: #2A457A;
+	color: #efefef;
+}
+#title {
+	display: inline-block;
+}
+#cupcake {
+	float: right;
+	display: inline-block;
+	padding: 12px;
+}
+
+.light-blue {
+	background-color: #099DD9;
+}
+.green {
+	/*background-color: #0C8542;*/
+	background-color: #099DD9;
+}
+#question {
+	padding-top: 30px;
+}
+
+/* The input box */
+#my-food {
+	width: 80%;
+	margin: 20px 7% 20px 7%;
+	padding: 10px;
+	font-size: 90%;
+	/* Doesn't inherit font; Have to specify */
+	font-family: 'Lato', sans-serif;
+}
+.red {
+	background-color: #EC1D3B;
+}
+.orange {
+	background-color: #F79420;
+}
+.purple {
+	background-color: #7A2A6D;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media screen and (min-width: 710px) {
+	.light-blue {
+		width: 25%;
+	}
+	.green {
+		width: 75%;
+	}
+	.red {
+		width: 40%;
+    }
+	.orange {
+		width: 60%;
+	}
+	
+}

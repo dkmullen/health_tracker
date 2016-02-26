@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Health Tracker</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:700,300,400' rel='stylesheet' type='text/css'>
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="box dark-blue">
+			<h1 id="title" class="block">Calorie Counter</h1>
+			<img id ="cupcake" src="img/Cupcake.png" alt="cupcake">
+		</div>
+		<div class="box light-blue">
+			<p id="question" class="block">What did you eat?</p>
+		</div>
+		<div class="box green">
+			<input id="my-food" placeholder="Type something: 'Hamburger', 'chicken breast'...">
+		</div>
+		<div class="box red">
+			<p id="search-results" class="block">Search results will appear here.</p>
+		</div>
+		<div class="box orange">
+			<p id="selected-item" class="block">Select an item to see it here.</p>
+		</div>
+		<div class="box purple">
+			<div class="block">
+				<h2>Your calorie report</h2>
+				<h3>Today</h3>
+				<h2>This week:</h2>
+				<h3>What you've eaten today</h3>
+				<h3>Foods will display below</h3>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- JavaScript Includes -->	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js"></script>
+		<script src="js/app.js"></script>
+
+    </body>
+</html>

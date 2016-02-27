@@ -99,14 +99,36 @@ h3 {
 	padding-top: 30px;
 }
 
-/* The input box */
+/* The HTML form */
+#food-form {
+	/*width: 80%;*/
+}
+/* The text box */
 #my-food {
 	width: 80%;
-	margin: 20px 7% 20px 7%;
+	display: inline-block;
+	margin: 20px;
 	padding: 10px;
 	font-size: 90%;
 	/* Doesn't inherit font; Have to specify */
 	font-family: 'Lato', sans-serif;
+	border: none;
+}
+/* The check button */
+#check {
+	background-color: transparent;
+	background-image: url(../img/tick36-2.png);
+	border: none;
+	height: 35px;
+	width: 36px;
+	position: relative;
+	top: 10px;
+}
+#check:focus {
+	outline: 0;
+}
+#check:hover {
+	background-color: #048BC2;
 }
 .red {
 	background-color: #EC1D3B;

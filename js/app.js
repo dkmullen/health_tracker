@@ -1,59 +1,58 @@
 (function($){
 	
-	//our model
-	var Person = Backbone.Model.extend({
+	//The model
+	var Food = Backbone.Model.extend({
 		defaults: {
-			name: '',
-			weight: -1,
-			BP1: -1,
-			BP2: -1
+			"item_name": "",
+			"brand_name": "",
+			"nf_calories": -1,
+			"nf_total_fat": -1
 		}
 	});
 	
-	//our collection
-	var People = Backbone.Collection.extend({
-		model: Person,
-		localStorage: new Backbone.LocalStorage('people-store')
+	//The collection
+	var TodaysFoods = Backbone.Collection.extend({
+		model: Food
+		//localStorage: new Backbone.LocalStorage('food-store')
 	});
 	
-	var people = new People(); //initialize everything
+	var foods = new TodaysFoods(); //initialize everything
 	
-	var DM = new Person({
-		name: 'Dennis',
-		weight: 183,
-		BP1: 141,
-		BP2: 87
+	var Banana = new Food({
+		name: 'Banana',
+		calories: 105,
+		carbs: 27
+	});
+	var Apple = new Food({
+		name: 'Apple',
+		calories: 95,
+		carbs: 25
 	});
 	
-	people.add(DM);
-	
-	DM.set('BP1', 138);
-	
-
-	//our view
+	//The view
 	var ListView = Backbone.View.extend({
-		//the DOM elem we bind this.el to - can be any valid CSS selector
-		el: $('body'),
+		//The DOM elem we bind this.el to - can be any valid CSS selector
+		el: $('.dark-blue'),
 		
 		events: {
-			'click button#add': 'addItem',
-			'click button#remove': 'removeItem'
+			'click img#cupcake': 'addItem'
+			//'click button#remove': 'removeItem'
 		},
 		
-		//called when our list view is created
+		//Called when our list view is created
 		initialize: function(){
 			this.render();
 		},
 		
 		render:function() {
-			$('#list').append('<li>Hey</li>');
+			$('#todays-food-list').append('<li>Apple</li>');
 		},
 		
 		addItem: function() {
-			$('#list').append('<li>Another one</li>');
+			$('#todays-food-list').append('<li>Another one</li>');
 		},
 		removeItem: function() {
-			$('#list li:last').remove();
+			console.log('remove');
 		}
 	});
 		
@@ -64,3 +63,12 @@
 	//console.log(DM.get('BP1'));
 	//console.log(people.get(DM).get('weight'));
 	//document.write(DM.get('name'));
+	
+	/*events: {
+			'click button#add': 'addItem',
+			'click button#remove': 'removeItem'
+		},
+	console.log(foods.get(Apple).get('name'));
+	console.log(foods);
+	
+	//Banana.set('Banana', 110, 28);*/

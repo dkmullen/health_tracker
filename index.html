@@ -20,10 +20,16 @@
 			<p id="question" class="block">What did you eat?</p>
 		</div>
 		<div class="box green">
-			<input id="my-food" placeholder="Type something: 'Hamburger', 'chicken breast'...">
+			<form id="food">
+			<input id="my-food" type="text" 
+				placeholder="Type something: 'Hamburger', 'chicken breast'...">
+			<input id="check" type="submit" value="">
+			</form>
 		</div>
 		<div class="box red">
 			<p id="search-results" class="block">Search results will appear here.</p>
+			
+				<ul id="results"></ul>
 		</div>
 		<div class="box orange">
 			<p id="selected-item" class="block">Select an item to see it here.</p>
@@ -31,10 +37,13 @@
 		<div class="box purple">
 			<div class="block">
 				<h2>Your calorie report</h2>
-				<h3>Today</h3>
-				<h2>This week:</h2>
-				<h3>What you've eaten today</h3>
+				<h3>Today: <span>0</span></h3>
+				<h3>This week: <span>0</span></h3>
+				<h2>What you've eaten today</h2>
 				<h3>Foods will display below</h3>
+				<hr>
+					<ul id="todays-food-list">
+					</ul>
 			</div>
 		</div>
 	</div>
